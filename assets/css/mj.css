@@ -1,0 +1,15 @@
+.mj-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mj-left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.mj-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

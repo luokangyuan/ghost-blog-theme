@@ -1,0 +1,47 @@
+.mj-nav-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+.mj-nav{
+    height: 50px;
+    width: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: #123;
+}
+.mj-nav-title{
+    margin-right: 20px;
+    color: #fff;
+    font-size: 16px;
+}
+.mj-icon-nav{
+    background: #123;
+    width: 30%;
+    height: 50px;
+}
+.mj-nav-log{
+    height: 100%;
+    width: 40%;
+}
+.mj-nav-name{
+    height: 100%;
+    width: 60%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.mj-logo img{
+    height: 45px;
+    padding-right: 5px;
+}
+.mj-head-bj{
+ background: #123;
+    width: 100%;
+    height: 350px;
+}
+.mj-inner{
+    margin-top: -350px;
+}
