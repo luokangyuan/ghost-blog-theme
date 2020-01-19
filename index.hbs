@@ -88,18 +88,18 @@ into the {body} of the default.hbs template --}}
         <div class="row mj-row">
             {{#foreach posts}}
                 <div class="col s12 m4">
-                    <a href="{{url}}">
+                    <a class="mj-card-post" href="{{url}}">
                         <div class="card card-hover">
                             <div class="card-image">
                                 <img src="http://image.luokangyuan.com/2019/08/09/09/08/08fog-foggy-lake-2649403.jpg">
                                 <span class="card-title">{{title}}</span>
                             </div>
                             <div class="card-content">
-                                <p>{{excerpt words="30"}}</p>
+                                <p class="mj-text">{{excerpt words="30"}}</p>
                                 <div class="mj-publish">
                                     <span class="mj-publish-date"><i class="fa fa-calendar fa-fw"></i>2019年08月17日</span>
                                     {{#foreach authors}}
-                                        <span class="publish-date"><i class="fa fa-user fa-fw"></i> {{name}}</span>
+                                        <span class="publish-date "><i class="fa fa-user fa-fw"></i> {{name}}</span>
                                     {{/foreach}}
                                 </div>
                             </div>
