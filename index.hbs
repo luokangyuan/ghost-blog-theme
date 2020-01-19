@@ -3,90 +3,118 @@
 into the {body} of the default.hbs template --}}
 
 <header class="site-home-header">
+    <div id="mj-stars"></div>
+    <div id="mj-stars2"></div>
+    <div id="mj-stars3"></div>
     <div class="mj-head-bj"></div>
-        <div class="inner mj-inner">
-            {{> "site-nav"}}
-            <div class="site-header-content">
-                <h1 class="site-title">
-                   一级标题
-                </h1>
-                <h2 class="site-description">二级标题</h2>
-            </div>
+    <div class="inner mj-inner">
+        {{> "site-nav"}}
+        <div class="site-header-content mj-header">
+            <h1 class=" mj-title">
+                努力做有价值的技术文章
+            </h1>
+            <h2 class=" mj-description">这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；</h2>
         </div>
+    </div>
     </div>
 </header>
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
-    <div class="inner posts">
+    <div class="container start-bj">
+        <div class="row mj-row row-top">
+            <div class="col s12 m4">
+                <div class="card-top card-ndwzs title-card" >
+                    <div class="card-top-content">
+                        <div class="top-wzzs">
+                            <div class="wzzs-icon">
+                                <div class="info-bj">
+                                    <img class="icon-img" height="48" width="48" src="/assets/images/icon-02.png"/>
+                                </div>
+                            </div>
+                            <div class="wzzs-info">
+                                <div class="sm-num">344</div>
+                                <div class="sm-title">文章总数（篇）</div>
+                            </div>
+                        </div>
+                        <div class="top-wzzs-info">
+                            <span class="title-xldy">人最终喜爱的是自己的欲望，不是自己想要的东西</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class=" card-top card-like title-card">
+                    <div class="card-top-content">
+                        <div class="top-wzzs">
+                            <div class="wzzs-icon">
+                                <div class="info-bj">
+                                    <img class="icon-img" height="48" width="48" src="/assets/images/icon-02.png"/>
+                                </div>
+                            </div>
+                            <div class="wzzs-info">
+                                <div class="sm-num">18</div>
+                                <div class="sm-title">2019年度文章数（篇）</div>
+                            </div>
+                        </div>
+                        <div class="top-wzzs-info">
+                            <span class="title-xldy">简洁是智慧的灵魂，冗长是肤浅的藻饰</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12 m4">
+                <div class="card-top card-other title-card">
+                    <div class="card-top-content">
+                        <div class="top-wzzs">
+                            <div class="wzzs-icon">
+                                <div class="info-bj">
+                                    <img class="icon-img" height="48" width="48" src="/assets/images/icon-02.png"/>
+                                </div>
+                            </div>
+                            <div class="wzzs-info">
+                                <div class="sm-num">3</div>
+                                <div class="sm-title">开源项目数（个）</div>
+                            </div>
+                        </div>
+                        <div class="top-wzzs-info">
+                            <span class="title-xldy">「要求」这个行为就是「它不在」的一个声明</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <div class="post-feed">
+        </div>
+        <div class="row mj-row">
             {{#foreach posts}}
-                {{> "post-card"}}
+                <div class="col s12 m4">
+                    <a href="{{url}}">
+                        <div class="card card-hover">
+                            <div class="card-image">
+                                <img src="http://image.luokangyuan.com/2019/08/09/09/08/08fog-foggy-lake-2649403.jpg">
+                                <span class="card-title">{{title}}</span>
+                            </div>
+                            <div class="card-content">
+                                <p>{{excerpt words="30"}}</p>
+                                <div class="mj-publish">
+                                    <span class="mj-publish-date"><i class="fa fa-calendar fa-fw"></i>2019年08月17日</span>
+                                    {{#foreach authors}}
+                                        <span class="publish-date"><i class="fa fa-user fa-fw"></i> {{name}}</span>
+                                    {{/foreach}}
+                                </div>
+                            </div>
+                            <div class="card-action mj-card-action">
+                                {{#foreach tags}}
+                                    <div class="chip mj-chip ">{{name}}</div>
+                                {{/foreach}}
+                            </div>
+                        </div>
+                    </a>
 
+                </div>
             {{/foreach}}
         </div>
-
     </div>
 </main>
 
-{{> site-header}}
 
-{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
-{{#contentFor "scripts"}}
-<script>
-
-    // NOTE: Scroll performance is poor in Safari
-    // - this appears to be due to the events firing much more slowly in Safari.
-    //   Dropping the scroll event and using only a raf loop results in smoother
-    //   scrolling but continuous processing even when not scrolling
-    $(document).ready(function () {
-
-        var nav = document.querySelector('.site-nav-main .site-nav');
-        var feed = document.querySelector('.post-feed');
-
-        var lastScrollY = window.scrollY;
-        var lastWindowHeight = window.innerHeight;
-        var lastDocumentHeight = $(document).height();
-        var ticking = false;
-
-        function onScroll() {
-            lastScrollY = window.scrollY;
-            requestTick();
-        }
-
-        function onResize() {
-            lastWindowHeight = window.innerHeight;
-            lastDocumentHeight = $(document).height();
-            requestTick();
-        }
-
-        function requestTick() {
-            if (!ticking) {
-                requestAnimationFrame(update);
-            }
-            ticking = true;
-        }
-
-        function update() {
-            var trigger = feed.getBoundingClientRect().top + window.scrollY;
-            var progressMax = lastDocumentHeight - lastWindowHeight;
-
-            // show/hide nav
-            if (lastScrollY >= trigger - 20) {
-                nav.classList.add('fixed-nav-active');
-            } else {
-                nav.classList.remove('fixed-nav-active');
-            }
-
-            ticking = false;
-        }
-
-        window.addEventListener('scroll', onScroll, { passive: true });
-        window.addEventListener('resize', onResize, false);
-
-        update();
-
-    });
-</script>
-{{/contentFor}}

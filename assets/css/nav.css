@@ -5,7 +5,7 @@
     width: 100%;
 }
 .mj-nav{
-    height: 50px;
+    height: 67px;
     width: 70%;
     display: flex;
     justify-content: flex-end;
@@ -20,7 +20,7 @@
 .mj-icon-nav{
     background: #123;
     width: 30%;
-    height: 50px;
+    height: 67px;
 }
 .mj-nav-log{
     height: 100%;
@@ -44,4 +44,14 @@
 }
 .mj-inner{
     margin-top: -350px;
+}
+.mj-title{
+    color: #fff;
+    font-size: 45px;
+}
+.mj-description{
+    color: #ffffff;
+    font-size: 1.313rem;
+    line-height: 1.4em;
+    margin-top: -10px;
 }
