@@ -2,22 +2,7 @@
 {{!-- The tag above means: insert everything in this file
 into the {body} of the default.hbs template --}}
 
-<header class="site-home-header">
-    <div id="mj-stars"></div>
-    <div id="mj-stars2"></div>
-    <div id="mj-stars3"></div>
-    <div class="mj-head-bj"></div>
-    <div class="inner mj-inner">
-        {{> "site-nav"}}
-        <div class="site-header-content mj-header">
-            <h1 class=" mj-title">
-                努力做有价值的技术文章
-            </h1>
-            <h2 class=" mj-description">这里，只求分享与免费；这里，不隐含扭曲的价值观，而是整合并充盈正能量；</h2>
-        </div>
-    </div>
-    </div>
-</header>
+{{> "star-banner"}}
 
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
@@ -91,13 +76,15 @@ into the {body} of the default.hbs template --}}
                     <a class="mj-card-post" href="{{url}}">
                         <div class="card card-hover">
                             <div class="card-image">
-                                <img src="http://image.luokangyuan.com/2019/08/09/09/08/08fog-foggy-lake-2649403.jpg">
-                                <span class="card-title">{{title}}</span>
+                                <img src="{{feature_image}}">
+                                <span class="card-title mj-title">{{title}}</span>
                             </div>
                             <div class="card-content">
                                 <p class="mj-text">{{excerpt words="30"}}</p>
                                 <div class="mj-publish">
-                                    <span class="mj-publish-date"><i class="fa fa-calendar fa-fw"></i>2019年08月17日</span>
+                                    <span class="mj-publish-date"><i class="fa fa-calendar fa-fw"></i>
+                                        <time class="byline-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY年MM月DD日"}}</time>
+                                    </span>
                                     {{#foreach authors}}
                                         <span class="publish-date "><i class="fa fa-user fa-fw"></i> {{name}}</span>
                                     {{/foreach}}
@@ -115,6 +102,7 @@ into the {body} of the default.hbs template --}}
             {{/foreach}}
         </div>
     </div>
+
 </main>
 
 
