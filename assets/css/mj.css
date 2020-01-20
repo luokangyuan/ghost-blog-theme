@@ -23,7 +23,7 @@
 }
 .start-bj{
     position: relative;
-    z-index: 2;
+    z-index: 2000;
 }
 .card .card-image img{
     border-radius: 5px 5px 0 0;
@@ -220,10 +220,7 @@
     box-shadow: 0 10px 20px 0 rgba(168,182,191,.6);
     transform: translateY(-1px);
 }
-.start-bj{
-    position: relative;
-    z-index: 2;
-}
+
 .mj-text-color {
     color: #08ffc8 !important
 }
@@ -415,6 +412,23 @@ element.style {
 }
 .card .card-action{
     padding: 5px 10px 5px 5px !important;
+}
+.mj-title{
+    font-weight: bold !important;
+    color: #ffffff;
+}
+.page-footer{
+    background: #123 !important;
+}
+.mj-footer{
+    color: #ffffff;
+    font-size: 14px;
+}
+.mj-theme{
+    color: #08ffc8;
+}
+.mj-nav a:hover{
+    text-decoration: none;
 }
 
 
