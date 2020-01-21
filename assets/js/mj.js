@@ -69,7 +69,7 @@ leidaChart.setOption({
 });
 
 /** 文章饼图*/
-var pieChart = echarts.init(document.getElementById('piecharts'), 'macarons');
+var pieChart = echarts.init(document.getElementById('piechart'), 'macarons');
 pieChart.setOption({
     tooltip: {
         trigger: 'item',
@@ -77,7 +77,7 @@ pieChart.setOption({
     },
     legend: {
         left: 'center',
-        bottom: '10',
+        bottom: '0',
         data: ['2020年', '2019年', '2018年', '2017年', '2016年']
     },
     series: [

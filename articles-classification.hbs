@@ -51,32 +51,12 @@
                         <span class="name-title">文章标签</span>
                     </div>
                     <div class="tag-title-info">
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
-                        <div class="tag-bj"><span>Java</span></div>
+                        {{#get "tags" limit="all" include="count.posts" order="count.posts desc" }}
+                    {{#foreach tags}}
+                        <div class="tag-bj"><span class="tag-name">{{name}}</span></div>
+                    {{/foreach}}
+                        {{/get}}
+
                     </div>
                 </div>
             </div>
@@ -96,7 +76,7 @@
                     <div class="tag-title-name">
                         <span class="name-title">文章年度数量饼图</span>
                     </div>
-                    <div  class="tag-title-info" id="piecharts">
+                    <div  class="tag-title-info" id="piechart" style="height: 340px">
                     </div>
                 </div>
             </div>
