@@ -70,7 +70,6 @@ leidaChart.setOption({
 
 /** 文章饼图*/
 var pieChart = echarts.init(document.getElementById('piechart'), 'macarons');
- console.log(pieChart)
 pieChart.setOption({
     tooltip: {
         trigger: 'item',

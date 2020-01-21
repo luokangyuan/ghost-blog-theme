@@ -159,7 +159,7 @@
     align-items: center;
     color: #123;
     font-size: 18px;
-    padding: 5px 40px 5px 40px;
+    padding: 5px 20px 5px 20px;
     margin-left: 10px;
     margin-bottom: 10px;
 }
@@ -404,9 +404,7 @@
     color: #525f7f;
     font-size: 15px;
 }
-.
-element.style {
-}
+
 .card .card-action:last-child {
     border-radius: 0 0 2px 2px;
 }
@@ -429,6 +427,110 @@ element.style {
 }
 .mj-nav a:hover{
     text-decoration: none;
+}
+.mj-time{
+    min-height: 500px;
+    display: flex;
+}
+.tag-name{
+    font-size: 13px;
+}
+.mj-time-post{
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+   ;
+}
+.mj-time-post-card{
+    width: 100%;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    align-content: flex-start;
+}
+.mj-line{
+    min-height: 100px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.mj-post-card{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 95%;
+
+}
+.mj-line-time{
+    width: 3px;
+   flex-grow: 1;
+    background: #0f9d58;
+}
+.mj-post-time{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background: #fff;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    color: #123;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mj-post{
+    height: 150px;
+    width: 30%;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.mj-name{
+    padding-left: 5px;
+    color: #123;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.mj-dec{
+    border-bottom: 2px solid #123;
+    padding-bottom: 5px;
+}
+.mj-sec-title{
+    font-size: 14px;
+    color: #525f7f;
+    padding-left: 5px;
+    padding-right: 5px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.mj-post-dec{
+    display: flex;
+    align-content: flex-start;
+}
+.mj-read-more{
+    margin-right: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.mj-read{
+    color: #123;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 0 20px 0 20px;
+    background: #fff;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+
 }
 
 
