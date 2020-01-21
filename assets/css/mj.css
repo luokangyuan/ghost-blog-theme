@@ -532,6 +532,96 @@
     box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
 
 }
+.mj-sponsor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #75878A;
+}
+.mj-bj{
+    width: 100%;
+    background-image: url("/assets/images/qunshan.png");
+}
+.mj-sponsor-des{
+    height: 80px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 40px;
+    margin-bottom: -40px;
+}
+#poem_sentence{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: normal;
+}
+#poem_info{
+    font-size: 16px;
+    color: #ffffff;
+}
+#poem_sentence1{
+    font-size: 20px;
+    color: #ffffff;
+    font-weight: normal;
+}
+#poem_info1{
+    font-size: 16px;
+    color: #ffffff;
+}
+.mj-info{
+    margin-left: 30px;
+}
+.mj-sponsor-img{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 30px;
+}
+.mj-img{
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+}
+.mj-sponsor-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mj-image{
+    width: 125px;
+    height: 125px;
+    border-radius: 125px;
+}
+.mj-sponsor-name{
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    height: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mj-sponsor-name-title{
+    border-bottom: 2px solid #123;
+    padding-bottom: 4px;
+}
+.mj-money{
+    padding: 5px 7px 5px 7px;
+    background: #525f7f;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.mj-monet-flex{
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
 
 
 @keyframes star_anti {
