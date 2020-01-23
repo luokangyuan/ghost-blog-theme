@@ -622,6 +622,251 @@
     justify-content: flex-start;
 
 }
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.mj-me-banner{
+    height: 260px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.mj-me-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.mj-sc{
+    width: 384px;
+    height: 245px;
+    border-radius: 5px;
+    margin-top: 40px;
+    justify-content: space-between;
+
+}
+.mj-sc1{
+    width: 80px;
+    height: 245px;
+    background: #88ADA6;
+    border-radius: 5px;
+    margin-top: 40px;
+    justify-content: space-between;
+
+}
+.hehua{
+    margin-top: -70px;
+    opacity: .2;
+}
+
+.social img{
+    height: 35px;
+    width: 35px;
+    padding: 6px;
+    background: rgba(0,0,0,.4);
+    margin-right: 20px;
+    border-radius: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mj-head img{
+    border-radius: 140px;
+}
+
+.mj-sc-name{
+    font-size: 14px;
+    color: rgb(80, 97, 109);
+    word-break: normal;
+    word-wrap: break-word;
+
+}
+.mj-wzsp{
+    height: 60%;
+    color: inherit;
+    width: 1rem;
+    font-weight: bold;
+    writing-mode: vertical-rl;
+    margin-left: 64px;
+    margin-top: 5px;
+    letter-spacing: 8px;
+    line-height: 25px;
+    text-align: start;
+}
+.mj-sc-img{
+    height: 40%;
+    opacity: .2;
+}
+.mj-sc-img img{
+    width: 78px;
+}
+.mj-card-about{
+    background: #ffffff;
+    box-shadow: 0 15px 35px rgba(50, 50, 93, .1), 0 5px 15px rgba(0, 0, 0, .07) !important;
+    min-height: 400px;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.zl-info{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.mj-number{
+    width: 400px;
+    height: 70px;
+}
+.count{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.wz{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 60px;
+}
+.wz-num{
+    color: #fff;
+    font-weight: bold;
+    font-size: 8px;
+    background: rgba(82,82,82,1);
+    padding: 3px 7px 3px 7px;
+    border-radius: 3px 0 0 3px;
+}
+.wz-sz{
+    background: #ca3e47;
+    border-radius: 0 3px 3px 0;
+}
+.right-sz{
+    background: #005792;
+}
+.mj-card-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.mj-xy{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.xy-base{
+    width: 400px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #123;
+    font-size: 18px;
+}
+.name{
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.name-logo1{
+    width: 22px !important;
+    height: 32px;
+}
+.name-title1{
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #123;
+    font-size: 24px;
+}
+.name-img1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mj-xm{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 100%;
+    margin-top: 6px;
+    text-align: center;
+}
+.desc-font{
+    color: #707070;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fu-title{
+    margin-top: -8px;
+}
+.mj-about-desc{
+    width: 800px;
+    height: 100%;
+    line-height: 30px;
+}
+.kyxm{
+    color: #123;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 65px;
+
+}
+.border-base{
+    border-bottom: 2px solid #123;
+}
+
+/** 项目*/
+.mj-about-xm{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.mj-about-xm-info{
+    width: 30%;
+    height: 400px;
+    background: #0f9d58;
+}
+.syah{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    flex-flow: wrap;
+}
+.ah-img1{
+    background: #952472;
+    width: 30%;
+    margin-bottom: 30px;
+}
+.img-card{
+    width: 100%;
+}
+
 
 
 @keyframes star_anti {
