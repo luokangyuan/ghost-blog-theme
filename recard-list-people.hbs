@@ -45,34 +45,25 @@
         <div class="row">
             <div class="col s12 m12 mj-sponsor-name">
                 <div class="mj-zz"><span class="mj-sponsor-name-title">赞助墙（你的赏识是我前进的动力）</span></div>
-                <div class="mj-monet-flex">
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
-                    <div class="mj-money">张三：0.5元</div>
+                <div class="mj-monet-flex" id="mj-sponsors">
+
                 </div>
             </div>
         </div>
     </div>
 </main>
+<script src="{{asset "lib/jquery/jquery-3.1.1.min.js"}}"></script>
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script src="{{asset "js/config.js"}}"></script>
 <script type="text/javascript">
+    let sponsorsEl = $("#mj-sponsors");
+    for (let i = 0; i < sponsors.length; i++) {
+        let sponsorItem = sponsors[i];
+        let bg = i > 0 ? "sponsor-card" + i % 10 : "sponsor-card";
+        sponsorsEl.append(
+        '<div class="mj-money '+bg+'">'+ sponsorItem.name+'：'+sponsorItem.money+'</div>'
+        )
+    }
     jinrishici.load(function (result) {
         var sentence = document.querySelector("#poem_sentence");
         var info = document.querySelector("#poem_info");
@@ -85,4 +76,5 @@
         sentence.innerHTML = result.data.content;
         info.innerHTML = '—— ' + result.data.origin.dynasty + ' · ' + result.data.origin.author + ' · ' + result.data.origin.title
     });
+
 </script>
