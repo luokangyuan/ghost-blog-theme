@@ -493,6 +493,7 @@
     flex-direction: column;
     margin-left: 10px;
     margin-top: 10px;
+    padding: 10px;
 }
 .mj-name{
     padding-left: 5px;
@@ -519,6 +520,7 @@
 }
 .mj-read-more{
     margin-right: 10px;
+    margin-top: 20px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -601,9 +603,13 @@
     flex-direction: column;
     align-items: center;
 }
+.mj-zz{
+    margin-top: 30px;
+}
 .mj-sponsor-name-title{
     border-bottom: 2px solid #123;
     padding-bottom: 4px;
+    font-size: 20px;
 }
 .mj-money{
     padding: 5px 7px 5px 7px;
@@ -635,6 +641,7 @@
     justify-content: space-between;
 }
 .mj-me-info{
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -845,8 +852,7 @@
 }
 .mj-about-xm-info{
     width: 30%;
-    height: 400px;
-    background: #0f9d58;
+    margin-top: 10px;
 }
 .syah{
     display: flex;
@@ -866,6 +872,163 @@
 .img-card{
     width: 100%;
 }
+.mj-xm-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mj-skill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#skill {
+    width: 100%;
+    padding: 30px;
+    display: block;
+    border-radius: 5px;
+    margin: auto;
+}
+.mj-friend-card{
+    height: 200px;
+    margin-top: -10px;
+    margin-bottom: 60px;
+
+}
+.frind-card {
+    background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+}
+
+.frind-card1 {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.frind-card2 {
+    background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+}
+
+.frind-card3 {
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+.frind-card4 {
+    background-image: linear-gradient(to top, #c471f5 0%, #fa71cd 100%);
+}
+
+.frind-card5 {
+    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+}
+
+.frind-card6 {
+    background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
+}
+
+.frind-card7 {
+    background-image: linear-gradient(to top, #0c3483 0%, #a2b6df 100%, #6b8cce 100%, #a2b6df 100%);
+}
+
+.frind-card8 {
+    background-image: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%);
+}
+
+.frind-card9 {
+    background-image: linear-gradient(to top, #f77062 0%, #fe5196 100%);
+}
+
+.frind-card10 {
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+}
+
+.frind-card11 {
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+.frind-card12 {
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+}
+.mj-friend-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.mj-friend-info-head-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 140px;
+}
+.mj-friend-head img{
+    width: 100px;
+    border-radius: 100px;
+}
+.mj-friend-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 100%;
+}
+.mj-friend-title{
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.mj-friend-name h1{
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bold;
+}
+.mj-friend-desc h2{
+    font-size: 18px;
+    color: #ffffff;
+}
+.mj-friend-desc{
+    margin-top: -10px;
+}
+.mj-friend-info-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+
+}
+.mj-button{
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mj-friend-button{
+    width: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mj-height{
+    height: 180px;
+}
+.mj-friend-info-button a:hover{
+    text-decoration: none;
+}
+
+
+
+
+
 
 
 
