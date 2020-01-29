@@ -270,6 +270,7 @@
 
 .mj-chip {
     height: 28px;
+    margin-top: 5px;
     line-height: 28px;
     background: #EAEAEA;
     color: #123;
@@ -302,7 +303,7 @@
 
 .mj-card-action {
     padding: 15px 10px 5px 5px;
-    margin-top: -15px;
+    margin-top: 5px;
 }
 
 .card-top {
@@ -1224,7 +1225,45 @@
 .sponsor-card9 {
     background: #30dff3;
 }
-
+.skill-bg{
+    background: #fa625f !important;
+}
+.skill-color{
+    background: #005995 !important;
+}
+.skill-bg1{
+    background: #ffb6b9 !important;
+}
+.skill-color1{
+    background: #8ac6d1 !important;
+}
+.skill-color2{
+    background: #005792 !important;
+}
+.skill-bg2{
+    background: #13334c !important;
+}
+.skill-color3{
+    background: #D25565 !important;
+}
+.skill-bg3{
+    background: #F0B775 !important;
+}
+.skill-color4{
+    background: #204969 !important;
+}
+.skill-bg4{
+    background: #08ffc8 !important;
+}
+.skill-color5{
+    background: #3b9a9c !important;
+}
+.skill-bg5{
+    background: #4bc2c5 !important;
+}
+.filled{
+    border-radius: 10px !important;
+}
 @keyframes star_anti {
     0% {
         transform: translateY(0px)

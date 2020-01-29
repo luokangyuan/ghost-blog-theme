@@ -18,7 +18,7 @@ into the {body} of the default.hbs template --}}
                                 </div>
                             </div>
                             <div class="wzzs-info">
-                                <div class="sm-num">344</div>
+                                <div class="sm-num" id="wzzs"></div>
                                 <div class="sm-title">文章总数（篇）</div>
                             </div>
                         </div>
@@ -38,8 +38,8 @@ into the {body} of the default.hbs template --}}
                                 </div>
                             </div>
                             <div class="wzzs-info">
-                                <div class="sm-num">18</div>
-                                <div class="sm-title">2019年度文章数（篇）</div>
+                                <div class="sm-num" id="ndwzs"></div>
+                                <div class="sm-title" id="ndwzsTitle"></div>
                             </div>
                         </div>
                         <div class="top-wzzs-info">
@@ -58,7 +58,7 @@ into the {body} of the default.hbs template --}}
                                 </div>
                             </div>
                             <div class="wzzs-info">
-                                <div class="sm-num">3</div>
+                                <div class="sm-num" id="kyxms"></div>
                                 <div class="sm-title">开源项目数（个）</div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ into the {body} of the default.hbs template --}}
                     <a class="mj-card-post" href="{{url}}">
                         <div class="card card-hover">
                             <div class="card-image">
-                                <img src="{{feature_image}}">
+                                <img height="250" src="{{feature_image}}">
                                 <span class="card-title mj-title">{{title}}</span>
                             </div>
                             <div class="card-content">
@@ -104,5 +104,28 @@ into the {body} of the default.hbs template --}}
     </div>
 
 </main>
+<script src="{{asset "lib/jquery/jquery-3.1.1.min.js"}}"></script>
+<script src="https://unpkg.com/@tryghost/content-api/umd/content-api.min.js"></script>
+<script src="{{asset "js/config.js"}}"></script>
+<script>
+    api.posts.browse({include: 'tags,authors'})
+        .then((posts) => {
+            $("#wzzs").append(posts.length);
+            let now = new Date();
+            let ndwzs = 0;
+            for (let i = 0; i < posts.length; i++) {
+                let createTime = posts[i].created_at;
+                if (now.getFullYear()==createTime.substr(0,4)){
+                    ndwzs++;
+                }
+            }
+            $("#ndwzs").append(ndwzs);
+            $("#ndwzsTitle").append(now.getFullYear() + "年度文章数（篇）");
+            $("#kyxms").append(personal.project.length);
+        })
+        .catch((err) => {
+            console.error(err);
+        });
+</script>
 
 

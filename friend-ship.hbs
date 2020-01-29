@@ -19,7 +19,6 @@ into the {body} of the default.hbs template --}}
     let friends = $("#mj-friends");
     for (let i = 0; i < friend.length; i++) {
         let friendItem = friend[i];
-
         let bg = i > 0 ? "frind-card" + i % 10 : "frind-card";
         friends.append(
                 '<div class="col s12 m4">\
