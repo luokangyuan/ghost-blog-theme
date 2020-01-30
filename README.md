@@ -1,6 +1,6 @@
 # ghost-blog-theme
 
-[![HitCount](http://hits.dwyl.io/luokangyuan/ghost-blog-theme.svg)](http://hits.dwyl.io/luokangyuan/ghost-blog-theme)  [![GitHub issues](https://img.shields.io/github/issues/luokangyuan/ghost-blog-theme.svg)](https://github.com/luokangyuan/ghost-blog-theme/issues)  [![GitHub license](https://img.shields.io/github/license/luokangyuan/ghost-blog-theme.svg)](https://github.com/luokangyuan/ghost-blog-theme/blob/master/LICENSE)  [![Download](https://img.shields.io/badge/downloads-master-green.svg)](https://img.shields.io/badge/hexo-%3E%3D%203.0-blue.svg) [![GitHub forks](https://img.shields.io/github/forks/luokangyuan/ghost-blog-themey.svg)](https://github.com/luokangyuan/ghost-blog-theme/network)  [![GitHub stars](https://img.shields.io/github/stars/luokangyuan/ghost-blog-theme.svg)](https://github.com/luokangyuan/ghost-blog-theme/stargazers) 
+ 
 
 > 这是一个卡片式风格设计的 Ghost 博客主题。
 
