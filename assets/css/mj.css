@@ -1264,6 +1264,147 @@
 .filled{
     border-radius: 10px !important;
 }
+/* toc导航样式 */
+
+#toc {
+    position: fixed;
+    left: 50%;
+    top: 80px;
+    margin-left: 380px;
+    border-radius: 5px;
+
+}
+
+#toc ul li a {
+    color: #34495e
+}
+
+.nav-list>.active>a {
+    color: #e66f0f !important;
+}
+
+.nav-list>.active>a,
+.nav-list>.active>a:hover {
+    color: #e66f0f;
+}
+
+.hiden-div {
+    display: none;
+}
+/** 文章内容样式*/
+/*文章列表卡片各样式*/
+#articles {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+article a {
+    margin-right: 0 !important;
+    color: #525f7f;
+    text-transform: none !important;
+}
+
+.articles .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+article .card {
+    border-radius: 0.3rem;
+}
+
+article .card-image img {
+    height: 220px;
+    border-radius: 0.3rem;
+}
+
+article .tag-image img {
+    height: 220px;
+}
+
+article .card .card-content {
+    padding: 15px 15px 12px 18px;
+}
+
+article .article-content .summary {
+    padding-bottom: 2px;
+    padding-left: 0;
+    margin-bottom: 6px;
+}
+
+article .article-content .publish-author {
+    float: right;
+}
+
+article .card .card-action {
+    padding: 10px 15px 10px 18px;
+}
+
+article .article-tags .chip {
+    margin: 2px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    height: 22px;
+    line-height: 22px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.prev-next {
+    margin-left: -0.75rem;
+}
+
+.prev-next .article-badge {
+    min-width: 3rem;
+    margin-top: 7px;
+    padding: 3px 10px 3px 8px;
+    text-align: center;
+    font-size: 1rem;
+    line-height: inherit;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 200;
+    background-color: #fff;
+    font-weight: 500;
+}
+
+.prev-next .left-badge {
+    border-radius: 0 5px 5px 0;
+}
+
+.prev-next .right-badge {
+    border-radius: 5px 0 0 5px;
+    right: 10px;
+}
+
+.paging .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.paging .page-info {
+    font-size: 1.4rem;
+    color: #888;
+    padding-top: 1rem;
+}
+
+.paging i {
+    font-size: 2.5rem;
+}
+
+.paging .disabled {
+    background-color: #ccc !important;
+}
+
+.paging .disabled i {
+    color: #999 !important;
+}
+
+
+
+
+
+
 @keyframes star_anti {
     0% {
         transform: translateY(0px)

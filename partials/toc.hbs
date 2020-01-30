@@ -1,0 +1,27 @@
+<div id="toc"></div>
+
+
+<script src="{{asset "lib/jquery/jquery-3.1.1.min.js"}}"></script>
+<script src="{{asset "lib/toc/jquery-ui-1.9.1.custom.min.js"}}"></script>
+<script src="{{asset "lib/toc/jquery.tocify.js"}}"></script>
+
+{{!-- 配置及生成目录 --}}
+<script>
+    var toc = $("#toc").tocify({
+        selectors: "h1,h2",
+        extendPage: false, // 页面不够长时拉长页面，这里选择关闭因为感觉留出大片空白不好看- -
+        highlightDefault: true // 自动高亮第一条
+    }).data("toc-tocify");
+
+
+    var toc = $("#toc");
+    $(window).scroll(function () {
+        var topSize = $(window).scrollTop();
+        if(topSize > 320){
+            toc.removeClass("hiden-div");
+        }else{
+            toc.addClass("hiden-div")
+        }
+    });
+</script>
+© 2020 GitHub, Inc.
