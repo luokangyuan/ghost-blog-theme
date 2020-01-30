@@ -72,9 +72,9 @@ into the {body} of the default.hbs template --}}
         </div>
         <div class="row mj-row">
             {{#foreach posts}}
-                <div class="col s12 m4">
+                <div class="col s12 m4" data-aos="zoom-in">
                     <a class="mj-card-post" href="{{url}}">
-                        <div class="card card-hover">
+                        <div class="card card-hover" >
                             <div class="card-image">
                                 <img height="250" src="{{feature_image}}">
                                 <span class="card-title mj-title">{{title}}</span>
@@ -108,6 +108,14 @@ into the {body} of the default.hbs template --}}
 <script src="https://unpkg.com/@tryghost/content-api/umd/content-api.min.js"></script>
 <script src="{{asset "js/config.js"}}"></script>
 <script>
+
+    $(function () {
+        AOS.init({
+            easing: 'ease-in-out-sine',
+            duration: 700,
+            delay: 100
+        });
+    });
     api.posts.browse({include: 'tags,authors'})
         .then((posts) => {
             $("#wzzs").append(posts.length);
