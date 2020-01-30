@@ -1,0 +1,114 @@
+/*文章详情样式*/
+.mj-container{
+    background: #ffffff;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15),
+    0 5px 15px rgba(0, 0, 0, .07),
+    0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+}
+.mj-container-flex{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.mj-content-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: 2px solid #123;
+}
+.mj-content-tag{
+    display: flex;
+
+}
+.mj-tag{
+    padding: 5px 10px 5px 10px;
+    background: #EAEAEA;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.mj-content{
+    padding: 30px;
+}
+.mj-content .kg-image-card img{
+    width: 100%;
+    align-items: center;
+}
+.mj-content .kg-image-card:first-child{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mj-content .kg-image-card:first-child img{
+    width: 130px;
+}
+h1{
+    text-align: center;
+    font-weight: bold !important;
+    color: #123 !important;
+    font-size: 30px;
+    line-height: 40px;
+
+}
+h2{
+    color: #123 !important;
+    font-weight: bold;
+    font-size: 28px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px !important;
+    margin-bottom: 20px;
+    line-height: 50px;
+}
+h3{
+    font-weight: bold;
+    color: #123;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+h4{
+    font-weight: bold;
+    color: #123;
+    font-size: 18px;
+}
+.mj-title{
+    font-weight: bold !important;
+    color: #ffffff !important;
+}
+.mj-description{
+    color: #ffffff !important;
+    border-bottom: none;
+    margin-top: 5px;
+}
+.mj-content ul li{
+    list-style-type: disc;
+    line-height: 1.8rem;
+    margin-left: 30px;
+}
+
+/* toc导航样式 */
+.toc{
+    width: 100%;
+    min-height: 400px;
+    justify-content: center;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+
+}
+.toc-title{
+    font-size: 30px;
+    font-weight: bold;
+    color: #123;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toc-info{
+    flex-grow: 1;
+}

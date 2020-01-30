@@ -19,15 +19,14 @@ into the {body} of the default.hbs template --}}
     let friends = $("#mj-friends");
     for (let i = 0; i < friend.length; i++) {
         let friendItem = friend[i];
-
-        let bg = i > 0 ? "frind-card" + i%10 : "frind-card";
+        let bg = i > 0 ? "frind-card" + i % 10 : "frind-card";
         friends.append(
                 '<div class="col s12 m4">\
-                        <div class="card-top '+bg +' mj-friend-card title-card mj-height" >\
+                        <div class="card-top ' + bg + ' mj-friend-card title-card mj-height" >\
                         <div class="mj-friend-info">\
                         <div class="mj-friend-info-head-info">\
                         <div class="mj-friend-head">\
-                        <img src=" '+friendItem.image +'">\
+                        <img src=" ' + friendItem.image + '">\
                         </div>\
                         <div class="mj-friend-title">\
                         <div class="mj-friend-name"><h1>' + friendItem.name + '</h1></div>\
@@ -35,8 +34,8 @@ into the {body} of the default.hbs template --}}
                     </div>\
                     </div>\
                     <div class="mj-friend-info-button">\
-                            <a  target="_blank" href="'+friendItem.website +'"><div class="mj-friend-button"> <div class="mj-button bj-card01"><span>个人网站</span></div></div></a>\
-                    <a target="_blank" href="'+friendItem.github +'"><div class="mj-friend-button"> <div class="mj-button bj-card03"><span>GitHub</span></div></div></a>\
+                            <a  target="_blank" href="' + friendItem.website + '"><div class="mj-friend-button"> <div class="mj-button bj-card01"><span>个人网站</span></div></div></a>\
+                    <a target="_blank" href="' + friendItem.github + '"><div class="mj-friend-button"> <div class="mj-button bj-card03"><span>GitHub</span></div></div></a>\
                     </div>\
                     </div>\
                     </div>\
