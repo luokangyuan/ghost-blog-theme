@@ -22,18 +22,18 @@ leidaChart.setOption({
             }
         },
         indicator: [
-            { name: 'Java', max: 10000 },
-            { name: '数据结构', max: 20000 },
-            { name: '设计模式', max: 20000 },
-            { name: '数据库', max: 20000 },
-            { name: '多线程', max: 20000 },
-            { name: '大数据', max: 20000 }
+            {name: 'Java', max: 10000},
+            {name: '数据结构', max: 20000},
+            {name: '设计模式', max: 20000},
+            {name: '数据库', max: 20000},
+            {name: '多线程', max: 20000},
+            {name: '大数据', max: 20000}
         ]
     },
     legend: {
         left: 'center',
         bottom: '10',
-        data: ['2017年','2018年', '2019年', '2020年']
+        data: ['2017年', '2018年', '2019年', '2020年']
     },
     series: [{
         type: 'radar',
@@ -88,11 +88,11 @@ pieChart.setOption({
             radius: [15, 95],
             center: ['50%', '38%'],
             data: [
-                { value: 320, name: '2020年' },
-                { value: 240, name: '2019年' },
-                { value: 149, name: '2018年' },
-                { value: 100, name: '2017年' },
-                { value: 59, name: '2016年' }
+                {value: 320, name: '2020年'},
+                {value: 240, name: '2019年'},
+                {value: 149, name: '2018年'},
+                {value: 100, name: '2017年'},
+                {value: 59, name: '2016年'}
             ],
             animationEasing: 'cubicInOut',
             animationDuration: 2600
@@ -101,6 +101,18 @@ pieChart.setOption({
 });
 
 /** 标签词云图*/
+let tags = [];
+api.posts.browse({include: 'tags,authors'})
+    .then((posts) => {
+        for (let i = 0; i < posts.length; i++) {
+            for (let j = 0; j < posts[i].tags.length; j++) {
+                tags.push(posts[i].tags[j].name);
+            }
+        }
+    })
+    .catch((err) => {
+        console.error(err);
+    });
 var chart = echarts.init(document.getElementById("wordchart"), 'macarons');
 chart.setOption({
     backgroundColor: "#fff",
@@ -122,7 +134,7 @@ chart.setOption({
             // maskImage: maskImage,
             textStyle: {
                 normal: {
-                    color: function() {
+                    color: function () {
                         return (
                             "rgb(" +
                             Math.round(Math.random() * 255) +
@@ -141,7 +153,7 @@ chart.setOption({
             bottom: null,
             width: "200%",
             height: "200%",
-            data:   [
+            data: [
                 {
                     name: "Java",
                     value: 30
@@ -224,7 +236,7 @@ barchart.setOption({
     legend: {
         left: 'center',
         bottom: '0',
-        data: [ '2016年', '2017年', '2018年']
+        data: ['2016年', '2017年', '2018年']
     },
     grid: {
         top: 10,
@@ -251,21 +263,22 @@ barchart.setOption({
         type: 'bar',
         stack: 'vistors',
         barWidth: '60%',
-        data: [79, 52, 200, 334,0,12,32,0,23 ,390, 330, 220],
+        data: [79, 52, 200, 334, 0, 12, 32, 0, 23, 390, 330, 220],
     }, {
         name: '2017年',
         type: 'bar',
         stack: 'vistors',
         barWidth: '60%',
-        data: [56, 52, 34, 334,0,12,3,0,23 ,45, 43, 0],
+        data: [56, 52, 34, 334, 0, 12, 3, 0, 23, 45, 43, 0],
     }, {
         name: '2018年',
         type: 'bar',
         stack: 'vistors',
         barWidth: '60%',
-        data: [56, 43, 0, 56,43,55,3,4,23 ,0, 43, 0],
+        data: [56, 43, 0, 56, 43, 55, 3, 4, 23, 0, 43, 0],
     }]
 });
+
 
 
 
