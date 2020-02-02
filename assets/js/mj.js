@@ -101,128 +101,75 @@ pieChart.setOption({
 });
 
 /** 标签词云图*/
-let tags = [];
 api.posts.browse({include: 'tags,authors'})
     .then((posts) => {
+        let tags = [];
+        let wordChartData = [];
         for (let i = 0; i < posts.length; i++) {
             for (let j = 0; j < posts[i].tags.length; j++) {
                 tags.push(posts[i].tags[j].name);
             }
         }
+        let data = countNum(tags);
+        for(let i in data) {
+            let wordChartItem = {};
+            wordChartItem.name = i;
+            wordChartItem.value = data[i];
+            wordChartData.push(wordChartItem);
+        }
+        wordChartFunction(wordChartData)
     })
     .catch((err) => {
         console.error(err);
     });
-var chart = echarts.init(document.getElementById("wordchart"), 'macarons');
-chart.setOption({
-    backgroundColor: "#fff",
-    series: [
-        {
-            type: "wordCloud",
-            //用来调整词之间的距离
-            gridSize: 15,
-            //用来调整字的大小范围
-            // Text size range which the value in data will be mapped to.
-            // Default to have minimum 12px and maximum 60px size.
-            sizeRange: [14, 50],
-            // Text rotation range and step in degree. Text will be rotated randomly in range [-90,                                                                             90] by rotationStep 45
-            //用来调整词的旋转方向，，[0,0]--代表着没有角度，也就是词为水平方向，需要设置角度参考注释内容
-            // rotationRange: [-45, 0, 45, 90],
-            // rotationRange: [ 0,90],
-            rotationRange: [0, 0],
-            //随机生成字体颜色
-            // maskImage: maskImage,
-            textStyle: {
-                normal: {
-                    color: function () {
-                        return (
-                            "rgb(" +
-                            Math.round(Math.random() * 255) +
-                            ", " +
-                            Math.round(Math.random() * 255) +
-                            ", " +
-                            Math.round(Math.random() * 255) +
-                            ")"
-                        );
+function wordChartFunction(arr) {
+    var chart = echarts.init(document.getElementById("wordchart"), 'macarons');
+    chart.setOption({
+        backgroundColor: "#fff",
+        series: [
+            {
+                type: "wordCloud",
+                //用来调整词之间的距离
+                gridSize: 15,
+                //用来调整字的大小范围
+                // Text size range which the value in data will be mapped to.
+                // Default to have minimum 12px and maximum 60px size.
+                sizeRange: [14, 50],
+                // Text rotation range and step in degree. Text will be rotated randomly in range [-90,                                                                             90] by rotationStep 45
+                //用来调整词的旋转方向，，[0,0]--代表着没有角度，也就是词为水平方向，需要设置角度参考注释内容
+                // rotationRange: [-45, 0, 45, 90],
+                // rotationRange: [ 0,90],
+                rotationRange: [0, 0],
+                //随机生成字体颜色
+                // maskImage: maskImage,
+                textStyle: {
+                    normal: {
+                        color: function () {
+                            return (
+                                "rgb(" +
+                                Math.round(Math.random() * 255) +
+                                ", " +
+                                Math.round(Math.random() * 255) +
+                                ", " +
+                                Math.round(Math.random() * 255) +
+                                ")"
+                            );
+                        }
                     }
-                }
-            },
-            left: "center",
-            top: "center",
-            right: null,
-            bottom: null,
-            width: "200%",
-            height: "200%",
-            data: [
-                {
-                    name: "Java",
-                    value: 30
                 },
-                {
-                    name: "设计模式",
-                    value: 14
-                },
-                {
-                    name: "大数据",
-                    value: 2
-                },
-                {
-                    name: "数据库",
-                    value: 3
-                },
-                {
-                    name: "css",
-                    value: 2
-                },
-                {
-                    name: "JavaScript",
-                    value: 3
-                },
-                {
-                    name: "Vue",
-                    value: 2
-                },
-                {
-                    name: "Apache",
-                    value: 7
-                },
-                {
-                    name: "Guava",
-                    value: 3
-                },
-                {
-                    name: "Spring",
-                    value: 3
-                },
-                {
-                    name: "SpringBoot",
-                    value: 2
-                },
-                {
-                    name: "SpringCloud",
-                    value: 3
-                },
-                {
-                    name: "ES6",
-                    value: 5
-                },
-                {
-                    name: "日常总结",
-                    value: 4
-                },
-                {
-                    name: "代码规范",
-                    value: 2
-                },
-                {
-                    name: "开发工具",
-                    value: 2
-                }
-            ]
+                left: "center",
+                top: "center",
+                right: null,
+                bottom: null,
+                width: "200%",
+                height: "200%",
+                data: arr
 
-        }
-    ]
-});
+            }
+        ]
+    });
+}
+
 
 /** 文章年度柱状图*/
 var barchart = echarts.init(document.getElementById("barchart"), 'macarons');
