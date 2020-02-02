@@ -67,38 +67,58 @@ leidaChart.setOption({
         ],
     }]
 });
-
-/** 文章饼图*/
-var pieChart = echarts.init(document.getElementById('piechart'), 'macarons');
-pieChart.setOption({
-    tooltip: {
-        trigger: 'item',
-        formatter: '{a} <br/>{b} : {c} ({d}%)'
-    },
-    legend: {
-        left: 'center',
-        bottom: '0',
-        data: ['2020年', '2019年', '2018年', '2017年', '2016年']
-    },
-    series: [
-        {
-            name: '文章数量',
-            type: 'pie',
-            roseType: 'radius',
-            radius: [15, 95],
-            center: ['50%', '38%'],
-            data: [
-                {value: 320, name: '2020年'},
-                {value: 240, name: '2019年'},
-                {value: 149, name: '2018年'},
-                {value: 100, name: '2017年'},
-                {value: 59, name: '2016年'}
-            ],
-            animationEasing: 'cubicInOut',
-            animationDuration: 2600
+api.posts.browse({include: 'tags,authors'})
+    .then((posts) => {
+        let postTime = [];
+        let pieChartData = [];
+        let pieChartObj = [];
+        for (let i = 0; i < posts.length; i++) {
+            let publishTme = posts[i].published_at;
+            let item = publishTme.substring(0, 7);
+            let s = item.replace("-","年") + "月";
+            postTime.push(s)
         }
-    ]
-});
+        let postCreateTime = countNum(postTime);
+        for(let i in postCreateTime) {
+            pieChartData.push(i);
+            let pieChartItem = {};
+            pieChartItem.value = postCreateTime[i];
+            pieChartItem.name = i;
+            pieChartObj.push(pieChartItem);
+        }
+        pieChart(pieChartData, pieChartObj)
+    })
+    .catch((err) => {
+        console.error(err);
+    });
+/** 文章饼图*/
+function pieChart(arr,arrData) {
+    var pieChart = echarts.init(document.getElementById('piechart'), 'macarons');
+    pieChart.setOption({
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b} : {c} ({d}%)'
+        },
+        legend: {
+            left: 'center',
+            bottom: '0',
+            data: arr
+        },
+        series: [
+            {
+                name: '文章数量',
+                type: 'pie',
+                roseType: 'radius',
+                radius: [15, 95],
+                center: ['50%', '38%'],
+                data: arrData,
+                animationEasing: 'cubicInOut',
+                animationDuration: 2600
+            }
+        ]
+    });
+
+}
 
 /** 标签词云图*/
 api.posts.browse({include: 'tags,authors'})
